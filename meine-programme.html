@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homebrew – Meine Programme</title>
+  <style>
+  :root{
+  --bg:#0b1117;
+  --panel:#0f1623;
+  --panel2:#0c1320;
+  --border:#1f2a3a;
+  --text:#e6edf3;
+  --muted:#9aa7b5;
+  --accent:#2f81f7;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.5;
+}
+header{
+  padding:28px 18px 14px; border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(78,163,255,0.10), rgba(0,0,0,0));
+}
+.container{max-width:980px; margin:0 auto; padding:0 18px 36px}
+h1{margin:0 0 6px; font-size:26px; letter-spacing:0.2px}
+.subtitle{color:var(--muted); margin:0}
+.badgebar{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+.badge{
+  font-size:12px; color:var(--muted); border:1px solid var(--border);
+  padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.03);
+}
+nav{
+  margin:18px 0 0; display:flex; gap:10px; flex-wrap:wrap;
+}
+nav a{
+  color:var(--text); text-decoration:none; border:1px solid var(--border);
+  padding:8px 10px; border-radius:10px; background:rgba(255,255,255,0.02);
+}
+nav a:hover{border-color:rgba(78,163,255,0.65)}
+.section{margin-top:22px; padding:18px; background:var(--panel); border:1px solid var(--border); border-radius:16px}
+.section h2{margin:0 0 10px; font-size:18px}
+.section h3{margin:16px 0 8px; font-size:15px; color:var(--text)}
+p{margin:10px 0; color:var(--text)}
+ul{margin:10px 0 0 18px; color:var(--text)}
+li{margin:6px 0}
+.callout{
+  padding:12px 12px; border-radius:14px; border:1px solid var(--border); background:var(--panel2);
+  margin:12px 0;
+}
+.callout strong{display:block; margin-bottom:6px}
+.callout.warning{border-color:rgba(255,204,102,0.45);}
+.callout.warning strong{color:var(--warn)}
+.callout.danger{border-color:rgba(255,107,107,0.45);}
+.callout.danger strong{color:var(--danger)}
+.callout.ok{border-color:rgba(102,227,161,0.35);}
+.callout.ok strong{color:var(--ok)}
+.codeblock{
+  margin:10px 0; border:1px solid var(--border); border-radius:14px; overflow:hidden;
+  background:var(--codebg);
+}
+.codehead{
+  display:flex; justify-content:space-between; align-items:center; gap:10px;
+  padding:10px 10px; border-bottom:1px solid var(--border); background:rgba(255,255,255,0.02);
+}
+.codehead .label{font-size:12px; color:var(--muted)}
+.copybtn{
+  border:1px solid var(--border); background:rgba(78,163,255,0.10); color:var(--text);
+  padding:7px 10px; border-radius:10px; cursor:pointer; font-size:12px;
+}
+.copybtn:hover{border-color:rgba(78,163,255,0.65)}
+pre{
+  margin:0; padding:12px 12px; overflow:auto; white-space:pre-wrap; word-break:break-word;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size:13px; color:#d7e7ff;
+}
+.kv{display:grid; grid-template-columns: 220px 1fr; gap:8px 12px; margin-top:10px}
+.kv div{padding:10px 10px; border:1px solid var(--border); border-radius:12px; background:rgba(255,255,255,0.02)}
+.kv .k{color:var(--muted); font-size:12px; padding-bottom:2px}
+.footer{margin-top:22px; color:var(--muted); font-size:12px}
+hr{border:0; border-top:1px solid var(--border); margin:16px 0}
+
+/* Two-column command grid (matches the "meine programme" reference layout) */
+.two-col{
+  display:grid;
+  gap:14px;
+}
+@media (min-width: 900px){
+  .two-col{ grid-template-columns: 1fr 1fr; }
+}
+.app{ margin-top: 14px; }
+.app h3{ margin: 16px 0 8px; font-size: 15px; color: var(--text); }
+
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Homebrew – Meine Programme</h1>
+    <p class="subtitle"></p>
+    <div class="badgebar"></div>
+    
+  </div>
+</header>
+
+<div class="container">
+<main>
+<section class="section">
+  <h2>Browser</h2>
+  <div class="app"><h3>Brave Browser</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_001', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_001">brew install --cask brave-browser</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_002', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_002">brew uninstall --cask brave-browser</pre>
+</div></div></div><div class="app"><h3>Google Chrome</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_003', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_003">brew install --cask google-chrome</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_004', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_004">brew uninstall --cask google-chrome</pre>
+</div></div></div><div class="app"><h3>Tor Browser</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_005', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_005">brew install --cask tor-browser</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_006', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_006">brew uninstall --cask tor-browser</pre>
+</div></div></div>
+</section>
+
+<section class="section">
+  <h2>Produktivität &amp; System</h2>
+  <div class="app"><h3>Raycast</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_007', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_007">brew install --cask raycast</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_008', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_008">brew uninstall --cask raycast</pre>
+</div></div></div><div class="app"><h3>BetterTouchTool</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_009', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_009">brew install --cask bettertouchtool</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_010', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_010">brew uninstall --cask bettertouchtool</pre>
+</div></div></div><div class="app"><h3>1Password</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_011', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_011">brew install --cask 1password</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_012', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_012">brew uninstall --cask 1password</pre>
+</div></div></div>
+</section>
+
+<section class="section">
+  <h2>Dateien &amp; Backup</h2>
+  <div class="app"><h3>Carbon Copy Cloner</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_013', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_013">brew install --cask carbon-copy-cloner</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_014', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_014">brew uninstall --cask carbon-copy-cloner</pre>
+</div></div></div><div class="app"><h3>FreeFileSync</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_015', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_015">brew install --cask freefilesync</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_016', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_016">brew uninstall --cask freefilesync</pre>
+</div></div></div><div class="app"><h3>Find Empty Folders</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_017', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_017">brew install --cask find-empty-folders</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_018', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_018">brew uninstall --cask find-empty-folders</pre>
+</div></div></div>
+</section>
+
+<section class="section">
+  <h2>Medien &amp; Tools</h2>
+  <div class="app"><h3>VLC</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_019', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_019">brew install --cask vlc</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_020', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_020">brew uninstall --cask vlc</pre>
+</div></div></div><div class="app"><h3>HandBrake</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_021', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_021">brew install handbrake</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_022', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_022">brew uninstall handbrake</pre>
+</div></div></div><div class="app"><h3>The Unarchiver</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_023', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_023">brew install --cask the-unarchiver</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_024', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_024">brew uninstall --cask the-unarchiver</pre>
+</div></div></div>
+<div class="app">
+  <h3>Logitech Options</h3>
+
+  <div class="two-col">
+
+    <!-- INSTALL (links) -->
+    <div class="codeblock">
+      <div class="codehead">
+        <div class="label"></div>
+        <button class="copybtn"
+                onclick="copyTextFrom('mp_031', this)"
+                type="button">Kopieren</button>
+      </div>
+      <pre id="mp_031">brew install --cask logitech-options</pre>
+    </div>
+
+    <!-- UNINSTALL (rechts) -->
+    <div class="codeblock">
+      <div class="codehead">
+        <div class="label"></div>
+        <button class="copybtn"
+                onclick="copyTextFrom('mp_032', this)"
+                type="button">Kopieren</button>
+      </div>
+      <pre id="mp_032">brew uninstall --cask logitech-options</pre>
+    </div>
+
+  </div>
+</div>
+
+</section>
+
+<section class="section">
+  <h2>Sicherheit</h2>
+  <div class="app"><h3>VeraCrypt</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_025', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_025">brew install --cask veracrypt</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_026', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_026">brew uninstall --cask veracrypt</pre>
+</div></div></div><div class="app"><h3>GPG Suite</h3><div class="two-col"><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_027', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_027">brew install --cask gpg-suite</pre>
+</div><div class="codeblock">
+  <div class="codehead">
+    <div class="label"></div>
+    <button class="copybtn" onclick="copyTextFrom('mp_028', this)" type="button">Kopieren</button>
+  </div>
+  <pre id="mp_028">brew uninstall --cask gpg-suite</pre>
+</div></div></div>
+</section>
+</main>
+</div>
+<script>
+function copyTextFrom(id, btn){
+  const el = document.getElementById(id);
+  const txt = el ? el.innerText : "";
+  navigator.clipboard.writeText(txt).then(() => {
+    const old = btn.innerText;
+    btn.innerText = "Kopiert";
+    setTimeout(()=> btn.innerText = old, 900);
+  });
+}
+</script>
+</body>
+</html>
